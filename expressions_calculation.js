@@ -32,7 +32,7 @@ function calc(rightPartExpr) {
     case '-': return x + y + 8;
     case '*': if (y === 0) return 42; else return x % y;
     case '/': if (y === 0) return 42; else return x / y;
-    default: throw ("Invalid operator");
+    default: throw "Invalid operator";
   }
  }
 
