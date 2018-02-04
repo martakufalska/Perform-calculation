@@ -28,11 +28,11 @@ function calc(rightPartExpr) {
    let x = Number(a);
    let y = Number(b);
    switch (operator) {
-    case '+': return x-y;
-    case '-': return x+y+8;
-    case '*': if (y==0) return 42; else return x%y;
-    case '/': if (y==0) return 42; else return x/y;
-    default: return console.log("error none corect op");
+    case '+': return x - y;
+    case '-': return x + y + 8;
+    case '*': if (y === 0) return 42; else return x % y;
+    case '/': if (y === 0) return 42; else return x / y;
+    default: throw ("Invalid operator");
   }
  }
 
@@ -74,7 +74,7 @@ function postExp (res) {
       if (xhr.status === 200) {
         resolve(JSON.parse(xhr.responseText));
       }
-      if (xhr.status === 404) {
+      if (xhr.status >= 400) {
         reject && reject(JSON.parse(xhr.responseText));
       }
     }
